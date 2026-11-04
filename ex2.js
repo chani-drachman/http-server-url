@@ -7,3 +7,6 @@
 const http = require("http");
 
 // write your code here
+const server=http.createServer((req,res)=>{
+    res.end(`You used method: ${req.method}`)
+}).listen(3000)

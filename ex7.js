@@ -8,6 +8,13 @@
 //
 // Run: node ex7.js   open http://localhost:3000/login?x=1   and look at the terminal
 
+const { log } = require("console");
 const http = require("http");
 
 // write your code here
+const server=http.createServer((req,res)=>{
+console.log(`Method: ${req.method}`)
+console.log(`URL: ${req.url}`)
+console.log(`HTTP Version: ${req.httpVersion}`)
+res.end()
+}).listen(3000)

@@ -8,3 +8,6 @@
 const http = require("http");
 
 // write your code here (create the server and call server.listen(3000))
+const server= http.createServer((req,res)=>{
+    res.end("Hello from Node Server!")
+ }).listen(3000)
